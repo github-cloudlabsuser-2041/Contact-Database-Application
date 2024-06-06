@@ -36,5 +36,12 @@
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
     @RenderSection("scripts", required: false)
+
+    <!-- Add the search view here -->
+    @using (Html.BeginForm("Search", "User", FormMethod.Get))
+    {
+        <input type="text" name="searchString" />
+        <input type="submit" value="Search" />
+    }
 </body>
 </html>
